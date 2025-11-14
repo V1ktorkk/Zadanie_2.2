@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="Odinetc Viktor" />
+        <meta
+            name="description"
+            content="Статический сайт с демонстрацией деплоя на GitHub Pages через GitHub Actions"
+        />
+        <meta
+            name="keywords"
+            content="GitHub Pages, GitHub Actions, статический сайт"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Задание 2.2 - Деплой на GitHub Pages</title>
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+        />
+        <link rel="stylesheet" href="styles/index.css" />
+    </head>
+
+    <body>
+        <!-- Header -->
+        <!-- Header -->
+        <header>
+            <nav class="navbar is-dark" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="index.html">
+                        <strong>Мой проект</strong>
+                    </a>
+
+                    <a
+                        role="button"
+                        class="navbar-burger"
+                        aria-label="menu"
+                        aria-expanded="false"
+                        data-target="navbarMenu"
+                    >
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div id="navbarMenu" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="index.html">Главная</a>
+                        <a class="navbar-item" href="#about">О проекте</a>
+                        <a class="navbar-item" href="#contact">Контакты</a>
+                    </div>
+
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="buttons">
+                                <a class="button is-primary">
+                                    <strong>GitHub</strong>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <section class="hero is-primary">
+                <div class="hero-body">
+                    <div class="container">
+                        <h1 class="title">Hello everyone</h1>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="columns">
+                        <div class="column is-8">
+                            <div class="content">
+                                <h2>О проекте</h2>
+                                <figure class="image"></figure>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip
+                                    ex ea commodo consequat. Duis aute irure
+                                    dolor in reprehenderit in voluptate velit
+                                    esse cillum dolore eu fugiat nulla pariatur.
+                                </p>
+                                <p>
+                                    Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt
+                                    mollit anim id est laborum. Sed ut
+                                    perspiciatis unde omnis iste natus error sit
+                                    voluptatem accusantium doloremque
+                                    laudantium.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="column is-4">
+                            <aside class="box">
+                                <h3 class="title is-5">
+                                    Дополнительная информация
+                                </h3>
+                                <div class="content">
+                                    <ul>
+                                        <li>GitHub Actions для CI/CD</li>
+                                        <li>HTML валидация через W3C</li>
+                                        <li>Минификация CSS, JS, HTML</li>
+                                        <li>PostCSS обработка стилей</li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <h2 class="title is-4">Университет ИТМО</h2>
+                        <picture>
+                            <source
+                                srcset="
+                                    https://itmo.ru/file/stat/482/slogans05.png
+                                "
+                                media="(min-width: 1063px)"
+                            />
+                            <img
+                                src="https://itmo.ru/file/pages/213/logo-mail.PNG"
+                                alt="Логотип ИТМО"
+                            />
+                        </picture>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Задание 2.2</strong> от
+                    <strong>Odinetc Viktor</strong>.
+                </p>
+            </div>
+
+            <div class="container">
+                <div class="columns">
+                    <div class="column">
+                        <h4 class="title is-6">О сайте</h4>
+                        <p>
+                            Данный проект демонстрирует автоматизированный
+                            деплой статического сайта на GitHub Pages с помощью
+                            GitHub Actions.
+                        </p>
+                    </div>
+
+                    <div class="column">
+                        <h4 class="title is-6">Технологии</h4>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>GitHub Actions</li>
+                            <li>PostCSS</li>
+                        </ul>
+                    </div>
+
+                    <div class="column">
+                        <h4 class="title is-6">Контакты</h4>
+                        <p>
+                            Email: example@itmo.ru<br />
+                            GitHub: <a href="https://github.com">@V1ktorkk</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content has-text-centered">
+                <p>© 2025 Все права защищены.</p>
+            </div>
+        </footer>
+
+        <script>
+            // Mobile menu toggle
+            document.addEventListener("DOMContentLoaded", () => {
+                const $navbarBurgers = Array.prototype.slice.call(
+                    document.querySelectorAll(".navbar-burger"),
+                    0
+                );
+
+                $navbarBurgers.forEach((el) => {
+                    el.addEventListener("click", () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle("is-active");
+                        $target.classList.toggle("is-active");
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

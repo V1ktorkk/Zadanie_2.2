@@ -1,0 +1,28 @@
+{
+  "name": "github-pages-site",
+  "version": "1.0.0",
+  "description": "Static site with GitHub Pages deployment",
+  "private": true,
+  "scripts": {
+    "start": "browser-sync start --server src --no-notify --no-ui --cwd src --files index.html,styles/**/*",
+    "test": "npm run validate && npm run build",
+    "validate": "html-validator dist --quiet",
+    "html": "html-minifier --remove-comments --collapse-whitespace --input-dir src --output-dir dist --file-ext html",
+    "styles": "postcss src/styles/index.css --use postcss-import --use postcss-csso --no-map --output dist/styles/index.css",
+    "build": "npm run html && npm run styles",
+    "serve": "serve dist"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "editorconfig-checker": "^3.1.0",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^7.1.1",
+    "postcss-csso": "^4.0.0",
+    "postcss-import": "^12.0.1",
+    "w3c-html-validator": "^2.0.1"
+  },
+  "dependencies": {
+    "serve": "^13.0.2"
+  }
+}
