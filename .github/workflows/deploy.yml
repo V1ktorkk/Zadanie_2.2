@@ -30,25 +30,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Validate HTML
-        uses: center-key/w3c-html-validator@v1
-        with:
-          files: src/*.html
-
       - name: Build and Minify
         run: npm run build
 
       - name: Minify CSS with PostCSS
         run: |
-          npx postcss src/styles/*.css --dir dist/styles --no-map
+          npx postcss src/styles/index.css --use postcss-import --use postcss-csso --no-map --output dist/styles/index.css
 
-      - name: Minify HTML
-        uses: emepetres/html-minifier-action@v1
-        with:
-          rootDir: "dist"
-          verbose: true
-          minifyCSS: true
-          minifyJS: true
+      - name: Validate HTML
+        run: npm run validate
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
