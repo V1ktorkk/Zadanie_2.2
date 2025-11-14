@@ -41,8 +41,3 @@ my-website/
 ## Workflow файл
 
 См. `.github/workflows/deploy.yml`
-
-## Ссылки
-
--   **GitHub Pages сайт**: https://your-username.github.io/my-static-site/
--   **Репозиторий**: https://github.com/your-username/my-static-site
